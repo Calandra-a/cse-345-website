@@ -1,0 +1,28 @@
+
+
+<html>
+
+<head>
+	<title>Question</title>
+</head>
+<body>
+<h1 align ="center"> Question </h1>
+<hr>
+<textarea style="position: fixed; right:35%; top: 20%; height: 300px; width: 500px" > sample text</textarea>
+<form  action="">
+ <div style="position: fixed; bottom:0px; left:45%">
+  <?php
+                $query = "SELECT * FROM Problems;";
+                $result = mysqli_query($conn, $query);
+                while($row = mysqli_fetch_assoc($result)) {
+                      echo $row["PROB_CODE"]. " ". $row["PROB_TEXT"]. "<br>";
+                }
+          ?> 
+  <input type="radio" name="ans" value="A"> Answer<br>
+  <input type="radio" name="ans" value="B"> Answer<br>
+  <input type="radio" name="ans" value="C"> Answer<br>
+  <input type="radio" name="ans" value="D"> Answer<br><br> 
+  <button onclick ""> <a href = "question.html">Submit </a></button></div>
+</form>
+</body>
+</html>
